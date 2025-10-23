@@ -1,0 +1,64 @@
+version: 2
+
+sources:
+
+
+  - name: dbt_everpro
+    schema: dbt_everpro
+    tables: 
+      - name: servicefusion_billing
+      - name: servicefusion_currency
+      - name: servicefusion_cohort_payment
+      - name: servicefusion_job
+      - name: servicefusion_invoice
+      
+
+  - name: ec_dbt_staging
+    schema: ec_dbt_staging
+    tables:
+      - name: sfdc_servicefusion_account
+
+
+  - name: ec_dw
+    schema: ec_dw
+    tables:
+      - name: date
+
+
+  - name: servicefusion
+    schema: ftc_evc_evp_sfu_msq_prod_servicefusion
+    tables:
+      - name: coupons
+      - name: l_signupclient_coupons
+      - name: l_signupoptions_signupclient
+      - name: login_log
+      - name: master_gateways
+      - name: salesreps
+      - name: signupclients
+      - name: signupclientsbilling
+      - name: signupindustries
+      - name: signupoptions
+      - name: signupplans
+      - name: ubase_companies
+      - name: ubase_invoices
+      - name: ubase_job_totals
+      - name: ubase_jobs
+      - name: ubase_payment_types
+      - name: ubase_payments
+      - name: ubase_purchase_order_backup
+      - name: ubase_users
+      - name: signupinvoices
+      - name: log_reports_payments_transaction_source
+      - name: log_reports_payments_ach_check_vs_manual
+      - name: ubase_company_prefs
+      - name: ubase_gateways
+
+
+  - name: fusionpay
+    schema: ftc_evc_evp_sfu_msq_prod_fusionpay
+    tables:
+      - name: fp_client_company
+      - name: fp_m_paysimple
+
+
+
